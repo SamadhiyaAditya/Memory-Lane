@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const savedStories = JSON.parse(localStorage.getItem('memorylane_stories')) || [];
     const currentUser = JSON.parse(localStorage.getItem('memorylane_user'));
-    const userStories = savedStories.filter((story) => story.author === currentUser.name); // ✅ filter by name
+    const userStories = savedStories.filter((story) => story.author === currentUser.name);
     setStories(userStories);
   }, []);  
 

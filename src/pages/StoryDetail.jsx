@@ -12,7 +12,7 @@ const StoryDetail = () => {
     const currentUser = JSON.parse(localStorage.getItem('memorylane_user'));
     const found = stories.find((s) => s.id === id);
     if (!found || found.author !== currentUser.name) {
-      navigate('/'); // Story not found, go back
+      navigate('/');
     } else {
       setStory(found);
     }
